@@ -188,7 +188,7 @@ const HomeScreen = ({ onNavigate, showToast, cartCount }: HomeScreenProps) => {
         <div className="flex items-center justify-between px-4 mb-3">
           <h3 className="font-display text-base tracking-wider uppercase">Best Deals Today 🔥</h3>
         </div>
-        <div className="grid grid-cols-2 gap-3 px-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 px-4">
           {deals.map((d, i) => (
             <button key={i} onClick={() => onNavigate("product")} className="bg-card rounded-xl p-3.5 border-[2.5px] border-foreground active:scale-[0.97] active:bg-secondary transition-all text-left">
               <span className="text-4xl mb-2 block">{d.emoji}</span>
