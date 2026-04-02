@@ -118,7 +118,7 @@ const HomeScreen = ({ onNavigate, showToast, cartCount }: HomeScreenProps) => {
 
       {/* Banner */}
       <div className="mx-3.5 mt-4 relative">
-        <div className="rounded-2xl overflow-hidden h-[168px] relative cursor-pointer border-[2.5px] border-foreground bg-foreground">
+        <div className="rounded-2xl overflow-hidden h-[168px] md:h-[240px] lg:h-[320px] relative cursor-pointer border-[2.5px] border-foreground bg-foreground">
           <div className="relative z-10 flex items-center h-full px-5">
             <div>
               <h2 className="font-display text-[32px] text-primary-foreground font-extrabold leading-none tracking-wider whitespace-pre-line uppercase">{slide.title}</h2>
