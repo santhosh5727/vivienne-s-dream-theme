@@ -29,7 +29,7 @@ const ProductScreen = ({ onNavigate, showToast, onAddToCart }: ProductScreenProp
         </div>
       </div>
 
-      <div className="bg-card p-6 flex items-center justify-center h-[268px] text-[120px] border-b-[2.5px] border-foreground">📱</div>
+      <div className="bg-card p-6 flex items-center justify-center h-[268px] md:h-[380px] lg:h-[460px] text-[120px] md:text-[160px] border-b-[2.5px] border-foreground">📱</div>
       <div className="flex justify-center gap-1.5 py-3 bg-card border-b-[2.5px] border-foreground">
         {[0, 1, 2, 3].map((i) => (
           <span key={i} className={`h-1.5 rounded-full ${i === 0 ? "w-[18px] bg-foreground" : "w-1.5 bg-foreground/20"}`} />

@@ -56,7 +56,7 @@ const CategoriesScreen = ({ onNavigate }: CategoriesScreenProps) => {
             <p className="text-[11px] text-primary-foreground/70 mt-0.5 font-body">Best deals today</p>
             <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[44px] opacity-40">{cat.emoji}</span>
           </div>
-          <div className="grid grid-cols-3 gap-2.5">
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2.5">
             {cat.subs.map((s, i) => {
               const emoji = s.split(" ")[0];
               const label = s.split(" ").slice(1).join(" ");

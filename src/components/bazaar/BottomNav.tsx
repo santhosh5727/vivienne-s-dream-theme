@@ -16,7 +16,7 @@ interface BottomNavProps {
 }
 
 const BottomNav = ({ active, onNavigate }: BottomNavProps) => (
-  <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] bg-card border-t-[2.5px] border-foreground flex z-[100] pb-3.5 pt-2">
+  <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] md:max-w-[768px] lg:max-w-[1200px] bg-card border-t-[2.5px] border-foreground flex z-[100] pb-3.5 pt-2 md:pb-2 md:pt-1.5">
     {navItems.map((item) => {
       const isActive = active === item.id || (active === "product" && item.id === "home");
       const Icon = item.icon;

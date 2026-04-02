@@ -51,7 +51,7 @@ const ProfileScreen = ({ showToast }: ProfileScreenProps) => (
       ))}
     </div>
 
-    <div className="-mt-2">
+    <div className="-mt-2 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-3 md:px-3.5">
       {sections.map((section) => (
         <div key={section.title} className="bg-card rounded-xl mx-3.5 mb-3 border-[2.5px] border-foreground overflow-hidden">
           <div className="text-[9px] font-bold text-muted-foreground px-4 pt-3 pb-1.5 uppercase tracking-[2px] font-display">{section.title}</div>

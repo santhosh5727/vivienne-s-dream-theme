@@ -64,7 +64,7 @@ const SearchScreen = ({ onNavigate }: SearchScreenProps) => {
             ))}
           </div>
           <div className="px-3.5 pt-2.5 pb-1 text-xs text-muted-foreground font-body">Showing results for "{query}"</div>
-          <div className="grid grid-cols-2 gap-3 px-3.5 mt-2">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 px-3.5 mt-2">
             {searchResults.map((p, i) => (
               <button key={i} onClick={() => onNavigate("product")} className="bg-card rounded-xl p-3 border-[2.5px] border-foreground active:scale-[0.97] transition-transform text-left">
                 <div className="w-full h-[128px] rounded-lg flex items-center justify-center text-[58px] mb-2.5 relative border-[2px] border-foreground bg-secondary">

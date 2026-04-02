@@ -26,7 +26,7 @@ const Index = () => {
   };
 
   return (
-    <div className="grain-overlay max-w-[430px] mx-auto min-h-screen relative overflow-x-hidden bg-background">
+    <div className="grain-overlay max-w-[430px] md:max-w-[768px] lg:max-w-[1200px] mx-auto min-h-screen relative overflow-x-hidden bg-background">
       {screen === "home" && <HomeScreen onNavigate={navigate} showToast={showToast} cartCount={cartCount} />}
       {screen === "categories" && <CategoriesScreen onNavigate={navigate} />}
       {screen === "product" && <ProductScreen onNavigate={navigate} showToast={showToast} onAddToCart={addToCart} />}

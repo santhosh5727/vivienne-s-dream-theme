@@ -118,7 +118,7 @@ const HomeScreen = ({ onNavigate, showToast, cartCount }: HomeScreenProps) => {
 
       {/* Banner */}
       <div className="mx-3.5 mt-4 relative">
-        <div className="rounded-2xl overflow-hidden h-[168px] relative cursor-pointer border-[2.5px] border-foreground bg-foreground">
+        <div className="rounded-2xl overflow-hidden h-[168px] md:h-[240px] lg:h-[320px] relative cursor-pointer border-[2.5px] border-foreground bg-foreground">
           <div className="relative z-10 flex items-center h-full px-5">
             <div>
               <h2 className="font-display text-[32px] text-primary-foreground font-extrabold leading-none tracking-wider whitespace-pre-line uppercase">{slide.title}</h2>
@@ -142,7 +142,7 @@ const HomeScreen = ({ onNavigate, showToast, cartCount }: HomeScreenProps) => {
           <h3 className="font-display text-base tracking-wider uppercase">Shop by Category</h3>
           <button onClick={() => onNavigate("categories")} className="text-[10px] font-bold tracking-[1.5px] border-[2px] border-foreground rounded-full px-3 py-1 active:bg-foreground active:text-primary-foreground transition-colors uppercase font-display">See All</button>
         </div>
-        <div className="flex gap-2.5 overflow-x-auto px-4 pb-1 scrollbar-hide">
+        <div className="flex gap-2.5 overflow-x-auto px-4 pb-1 scrollbar-hide md:grid md:grid-cols-4 lg:grid-cols-8 md:overflow-x-visible">
           {categories.map((c) => (
             <button key={c.label} onClick={() => onNavigate("categories")} className="shrink-0 flex flex-col items-center gap-1.5 group">
               <div className="w-[60px] h-[60px] rounded-2xl flex items-center justify-center text-[26px] border-[2.5px] border-foreground bg-card group-active:bg-foreground group-active:scale-[0.92] transition-all">
@@ -160,7 +160,7 @@ const HomeScreen = ({ onNavigate, showToast, cartCount }: HomeScreenProps) => {
           <span className="bg-foreground text-primary-foreground rounded-lg px-3 py-1.5 text-[11px] font-bold flex items-center gap-1.5 font-display tracking-wider uppercase">⚡ Flash Sale</span>
           <span className="bg-foreground text-primary-foreground rounded-lg px-3 py-1.5 text-[13px] font-bold tracking-[2.5px] font-mono">{formatTime(timer)}</span>
         </div>
-        <div className="flex gap-3 overflow-x-auto px-4 pb-1 scrollbar-hide">
+        <div className="flex gap-3 overflow-x-auto px-4 pb-1 scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-x-visible">
           {flashProducts.map((p, i) => (
             <button key={i} onClick={() => onNavigate("product")} className="shrink-0 w-[148px] bg-card rounded-xl p-3 border-[2.5px] border-foreground active:scale-[0.97] transition-transform text-left">
               <div className="w-full h-[108px] rounded-lg flex items-center justify-center text-[50px] mb-2 relative border-[2px] border-foreground bg-secondary">
@@ -188,7 +188,7 @@ const HomeScreen = ({ onNavigate, showToast, cartCount }: HomeScreenProps) => {
         <div className="flex items-center justify-between px-4 mb-3">
           <h3 className="font-display text-base tracking-wider uppercase">Best Deals Today 🔥</h3>
         </div>
-        <div className="grid grid-cols-2 gap-3 px-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 px-4">
           {deals.map((d, i) => (
             <button key={i} onClick={() => onNavigate("product")} className="bg-card rounded-xl p-3.5 border-[2.5px] border-foreground active:scale-[0.97] active:bg-secondary transition-all text-left">
               <span className="text-4xl mb-2 block">{d.emoji}</span>
@@ -202,7 +202,7 @@ const HomeScreen = ({ onNavigate, showToast, cartCount }: HomeScreenProps) => {
 
       {/* Mini Banners */}
       <div className="mt-6">
-        <div className="grid grid-cols-2 gap-3 px-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 px-4">
           {miniBanners.map((b, i) => (
             <div key={i} className="rounded-xl p-4 min-h-[94px] relative overflow-hidden border-[2.5px] border-foreground bg-foreground cursor-pointer active:scale-[0.97] transition-transform">
               <h4 className="font-display text-[12px] font-bold text-primary-foreground mb-1 relative z-10 leading-tight tracking-wider uppercase">{b.title}</h4>
@@ -232,7 +232,7 @@ const HomeScreen = ({ onNavigate, showToast, cartCount }: HomeScreenProps) => {
           <h3 className="font-display text-base tracking-wider uppercase">Trending Now 📈</h3>
           <span className="text-[10px] font-bold tracking-[1.5px] border-[2px] border-foreground rounded-full px-3 py-1 font-display uppercase">See All</span>
         </div>
-        <div className="grid grid-cols-2 gap-3 px-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 px-4">
           {trendingProducts.map((p, i) => (
             <button key={i} onClick={() => onNavigate("product")} className="bg-card rounded-xl p-3 border-[2.5px] border-foreground active:scale-[0.97] transition-transform text-left">
               <div className="w-full h-[128px] rounded-lg flex items-center justify-center text-[58px] mb-2.5 relative border-[2px] border-foreground bg-secondary">
