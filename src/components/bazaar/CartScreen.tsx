@@ -42,7 +42,7 @@ const CartScreen = ({ showToast }: CartScreenProps) => {
         <span className="inline-flex items-center gap-1.5 bg-primary-foreground/20 border border-primary-foreground/30 rounded-lg px-2.5 py-1 text-[11px] font-bold text-primary-foreground mt-2 font-display tracking-wider">✨ ₹1,58,656 SAVED</span>
       </div>
 
-      <div className="mt-3.5">
+      <div className="mt-3.5 md:grid md:grid-cols-[1fr_360px] md:gap-4 md:px-3.5">
         <div className="bg-secondary rounded-xl mx-3.5 mb-2.5 p-3 flex items-center gap-2.5 border-[2.5px] border-foreground">
           <Truck className="w-5 h-5 text-foreground shrink-0" strokeWidth={2.5} />
           <span className="text-[12.5px] font-bold text-foreground font-display tracking-wider uppercase">🎉 FREE delivery on this order</span>

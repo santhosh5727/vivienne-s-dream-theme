@@ -232,7 +232,7 @@ const HomeScreen = ({ onNavigate, showToast, cartCount }: HomeScreenProps) => {
           <h3 className="font-display text-base tracking-wider uppercase">Trending Now 📈</h3>
           <span className="text-[10px] font-bold tracking-[1.5px] border-[2px] border-foreground rounded-full px-3 py-1 font-display uppercase">See All</span>
         </div>
-        <div className="grid grid-cols-2 gap-3 px-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 px-4">
           {trendingProducts.map((p, i) => (
             <button key={i} onClick={() => onNavigate("product")} className="bg-card rounded-xl p-3 border-[2.5px] border-foreground active:scale-[0.97] transition-transform text-left">
               <div className="w-full h-[128px] rounded-lg flex items-center justify-center text-[58px] mb-2.5 relative border-[2px] border-foreground bg-secondary">
