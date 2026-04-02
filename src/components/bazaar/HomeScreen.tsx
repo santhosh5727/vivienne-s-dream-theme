@@ -202,7 +202,7 @@ const HomeScreen = ({ onNavigate, showToast, cartCount }: HomeScreenProps) => {
 
       {/* Mini Banners */}
       <div className="mt-6">
-        <div className="grid grid-cols-2 gap-3 px-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 px-4">
           {miniBanners.map((b, i) => (
             <div key={i} className="rounded-xl p-4 min-h-[94px] relative overflow-hidden border-[2.5px] border-foreground bg-foreground cursor-pointer active:scale-[0.97] transition-transform">
               <h4 className="font-display text-[12px] font-bold text-primary-foreground mb-1 relative z-10 leading-tight tracking-wider uppercase">{b.title}</h4>
