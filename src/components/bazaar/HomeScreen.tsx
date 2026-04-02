@@ -160,7 +160,7 @@ const HomeScreen = ({ onNavigate, showToast, cartCount }: HomeScreenProps) => {
           <span className="bg-foreground text-primary-foreground rounded-lg px-3 py-1.5 text-[11px] font-bold flex items-center gap-1.5 font-display tracking-wider uppercase">⚡ Flash Sale</span>
           <span className="bg-foreground text-primary-foreground rounded-lg px-3 py-1.5 text-[13px] font-bold tracking-[2.5px] font-mono">{formatTime(timer)}</span>
         </div>
-        <div className="flex gap-3 overflow-x-auto px-4 pb-1 scrollbar-hide">
+        <div className="flex gap-3 overflow-x-auto px-4 pb-1 scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-x-visible">
           {flashProducts.map((p, i) => (
             <button key={i} onClick={() => onNavigate("product")} className="shrink-0 w-[148px] bg-card rounded-xl p-3 border-[2.5px] border-foreground active:scale-[0.97] transition-transform text-left">
               <div className="w-full h-[108px] rounded-lg flex items-center justify-center text-[50px] mb-2 relative border-[2px] border-foreground bg-secondary">
