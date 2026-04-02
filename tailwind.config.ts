@@ -99,6 +99,9 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      borderWidth: {
+        thick: "2.5px",
+      },
       boxShadow: {
         sm: "var(--sh-sm)",
         md: "var(--sh-md)",
