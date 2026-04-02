@@ -142,7 +142,7 @@ const HomeScreen = ({ onNavigate, showToast, cartCount }: HomeScreenProps) => {
           <h3 className="font-display text-base tracking-wider uppercase">Shop by Category</h3>
           <button onClick={() => onNavigate("categories")} className="text-[10px] font-bold tracking-[1.5px] border-[2px] border-foreground rounded-full px-3 py-1 active:bg-foreground active:text-primary-foreground transition-colors uppercase font-display">See All</button>
         </div>
-        <div className="flex gap-2.5 overflow-x-auto px-4 pb-1 scrollbar-hide">
+        <div className="flex gap-2.5 overflow-x-auto px-4 pb-1 scrollbar-hide md:grid md:grid-cols-4 lg:grid-cols-8 md:overflow-x-visible">
           {categories.map((c) => (
             <button key={c.label} onClick={() => onNavigate("categories")} className="shrink-0 flex flex-col items-center gap-1.5 group">
               <div className="w-[60px] h-[60px] rounded-2xl flex items-center justify-center text-[26px] border-[2.5px] border-foreground bg-card group-active:bg-foreground group-active:scale-[0.92] transition-all">
